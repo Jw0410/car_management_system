@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>front page</title>
+    <script src="{{ url_for('static',filename='css/style.css') }}"></script>
+    <style>
+        body{
+            background-image: url("{{ url_for('static',filename='images/sports-car-races-through-dark-blurred-motion-generative-ai.jpg') }}");
+            background-size: cover;
+            background-repeat: no-repeat;
+           
+            
+        }
+        .head{
+            background-color: silver;
+            size: 150vh;
+            font-weight: bold;
+            
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+            height:80px;
+            border-radius: 20px;
+        }
+    
+        form{
+            text-align: center;
+            margin-top: 200px;
+        }
+ 
+
+        .index{
+            background-color: silver; 
+               border: none;
+               color: rgb(15, 15, 15);
+               padding: 15px 32px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 30px;
+               font-weight: bold;
+               margin: 4px 2px;
+               border-radius: 20px;
+               cursor: pointer;
+
+        }
+     
+    </style>
+</head>
+
+<body>
+    <form method="POST" action="/index">
+       <button class="head">CAR MANAGEMENT SYSTEM</button><br><br>
+
+        <a href="/register" class="index">STAFF</button></a>
+
+
+<a href="/admin_login" class="index">ADMIN</button></a>
+               
+
+</form>    
+</body>
+</html>

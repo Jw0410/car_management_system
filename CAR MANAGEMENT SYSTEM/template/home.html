@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car Bill System</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}" >
+</head>
+<body action="/home">
+
+    <header>
+        <h1>Car Sales Details</h1>
+    </header>
+    
+    <form id="billForm" action="/home" method="POST" >
+    <section class="container">
+        
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="carmodel">Car Model:</label>
+            <input type="text" id="carmodel" name="carmodel" required>
+
+            <label for="actualamount">Actual Amount:</label>
+            <input type="number" id="actualamount" name="actualamount" required>
+            
+            <label for="sellingamount">Selling Amount:</label>
+            <input type="number" id="sellingamount" name="sellingamount" required>
+
+            <label for="car_remain">Remaining of Cars:</label>
+            <input type="number" id="car_remain" name="car_remain" required>
+
+            
+            
+            <button type="submit" value="Add">ADD</button>
+<br><br>
+<a href='/index'>
+    <button type="button">BACK TO HOME</button></a>
+            
+        
+    </section>
+    
+</form> 
+
+
+    <style>
+        body{
+            background-image:url("{{ url_for('static',filename='images/car_details.jpg') }}");
+            background-size: cover; 
+            background-repeat: no-repeat;
+        }
+    </style>
+
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body>
+</html>

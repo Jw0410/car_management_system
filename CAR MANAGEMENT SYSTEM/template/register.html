@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body style="background-image: url(https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2Fyc3xlbnwwfHwwfHx8MA%3D%3D);">
+    
+    <nav>       
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+
+
+    <form method="post" action="/register">
+        <h2>USER REGISTER</h2>
+
+
+        <div class="container">
+            <div class="wrapper">
+        <label for="username">Username:</label><br></div>
+        <input type="text" id="username" class="txtbox" name="username" required>
+        <br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" class="txtbox" name="password" required>
+        <br>
+        <label for="phoneno">Phone No:</label><br>
+        <input type="tel" id="phoneno" class="txtbox" name="phoneno" pattern="[0-9]{10}" required>
+        <br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" class="txtbox" name="email" required>
+        <input type="submit" value="Register" class="btn">
+   
+    <p>Already have an account? <a href="/login" class="btn">Login</a></p>
+</div>
+</form>
+
+<style>
+    img{
+        width: 100vh;
+        height: 500vh;
+        display: block;
+        margin: auto;
+       
+    }
+    .txtbox{
+       width: 300px;
+       font-weight: bold;
+       height: max-content;
+       font-size: large;
+       padding:0.5em;
+    }
+    h2{
+        align-items: center;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        color: rgb(215, 230, 8);
+    }
+    body {  
+        background-size: cover; 
+        background-repeat: no-repeat;        
+        padding: center 0.5;
+        margin: 0%;
+    }
+    .btn{
+        background-color: #053dd6;
+        color: white;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    form{
+        text-align: center;
+        align-items: center;
+        margin-top: 200px;
+        color:#f7f6f6;
+      
+        margin-left: 30vh;
+        margin-right: 20vh;
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .container{
+        width: 450px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid rgb(221, 9, 9);
+        border-radius: 20px;
+       
+    }
+   
+    nav {
+        margin-top: 100px;
+        
+        overflow:hidden;
+        position:absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav a {
+        float: left;
+        display:flex;
+        color: #fff;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    nav:hover{
+        box-shadow: #078d92;
+      
+        color:#f7f6f6
+    }
+    
+    nav a:hover {
+        background-color: #f7f6f6;
+        color: #333;
+    }
+</style>
+</body>
+</html>

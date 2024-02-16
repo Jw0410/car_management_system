@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user billing details</title>
+    <script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</head>
+    
+    <body>
+    
+        <h2>Car Details</h2>
+        <form method="GET" action="{{ url_for('display_details') }}">
+           
+            <input type="text" id="search_query" class="txtbox" name="search_query" placeholder="Enter your search here" pattern="[A-Za-z0-9]*">
+            <button type="submit">Search</button>
+        </form><br>
+        <table border="5" id="show">
+            <thead>
+                <tr>
+                <th>Date</th>
+                <th>Car Model</th>
+                <th>Actual Amount</th>
+                <th>Selling Amount</th>
+                <th>Car Remains</th>
+                </tr>
+        </thead>
+        <tbody>
+            {% for detail in car_detail %}
+                <tr>
+                    <td>{{ detail[0].strftime('%d-%m-%y')}}</td>
+                    <td>{{ detail[1] }}</td>
+                    <td>{{ detail[2] }}</td>
+                    <td>{{ detail[3] }}</td>
+                    <td>{{ detail[4] }}</td>
+                    <!-- Add more cells based on your table structure -->
+                </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+
+        <style>
+            button{
+                background-color: #091ee0;
+                color: white;
+                border: none;
+                padding: 13px 30px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+            }
+            form{
+
+            text-align: right;
+                   
+            }
+            .label{
+                size: 200px;
+            }
+            .txtbox{
+                width: 300px;
+                font-weight: bold;
+                height: max-content;
+                font-size: large;
+                padding:0.5em;
+            }
+    
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+        
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+        
+            }
+        
+            th {
+                background-color: #f2f2f2;
+            }
+
+            body{
+                background-image: url("https://img.freepik.com/free-vector/wave-background_53876-115944.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+
+        <a href="/index"><button type="button">BACK TO HOME</button></a>
+            
+    
+   
+</body>
+</html>
