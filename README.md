@@ -1,6 +1,6 @@
 # car_management_system
 hi, to run this program you need this requirements VSCode(for editing program)
-after installing the vs code, you need to install python exe file for backend program.
+after installing the vs code, you need to install python exe file for backend program. Also you need Database to store the data in that case install Mysql exe file make it extract and install. 
 
 #DOWNLOAD THE ZIP FILE 
 
